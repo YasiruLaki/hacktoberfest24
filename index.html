@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hacktoberfest Challenges</title>
+  </head>
+  <body>
+    <!--BG -->
+    <div>
+      <svg
+        class="svg-pattern"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 144"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M214 1.87085e-05V80H285V109H419V80L627 80V19.5091L763.086 19.5091V80H889.801V55.3599L1003.94 55.3599V110.233L1073.44 110.233V29.7522L1256 29.7522V3.44969e-06L1440 1.87085e-05V144H0V0L214 1.87085e-05ZM627 144V80.2358L763 80.2358V144L627 144Z"
+          fill="#183717"
+        ></path>
+        <path d="M419 80L285 80V50L419 50V80Z" fill="#183717"></path>
+      </svg>
+    </div>
+    <div class="green-container"></div>
+
+    <!-- Conetnt -->
+    <div class="container">
+        <div class="timer">
+            <div class="timer-text">Time Left: <span id="timer">40m 00s</span></div>
+        </div>
+
+        <div class="team">
+            <div class="timer-text">Team No. 1</div>
+        </div>
+
+      <img
+        class="logo"
+        src="./images/horizontal_black.png"
+        alt="Hacktoberfest 2021"
+      />
+
+      <h1 class="title">Hack the <span class="bold">Puzzle</span></h1>
+
+      <p class="description">
+        Welcome to Hack the Puzzle, a four-stage coding challenge where your
+        goal is to solve puzzles and crack passwords to escape. Each stage
+        presents unique clues, and only the sharpest coders will unlock the next
+        level. With increasing difficulty, logic, and programming skills are
+        key. Can you break through all four stages and complete the challenge?
+      </p>
+
+      <div class="Divider-styles__StyledDivider-sc-8fb3cd24-0 hdkpIz divider"></div>
+
+      <div class="start-section">
+        <button class="start-button" onclick="startChallenge()">BEGIN QUEST</button>
+    </div>
+
+
+    <div class="challenge-container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="close"></div>
+                <div class="minimize"></div>
+                <div class="maximize"></div>
+            </div>
+            <div>
+                <h2 class="terminal-title line-1">Welcome to 'Hack the Puzzle' Hacktoberfest challenge.</h2></br>
+                <h2 class="terminal-title line-2 ">Give a Name for your team...</h2></br>
+                <h2 class="terminal-title line-3">
+                    <input class="terminal-input input-1" type="text">
+                </h2>
+
+                <h2 class="terminal-subtitle line-4 ">Welcome </h2></br>
+                <h2 class="terminal-subtitle line-5 ">[Connecting with Players....]</h2></br>
+                <h2 class="terminal-subtitle line-6 ">[Connected. Ready to Begin]</h2></br>
+                <h2 class="terminal-title line-7 ">Hit ENTER when you are ready to go</h2></br>
+            </div>
+        </div>
+    </div>
+
+    <div class="challenge-box challenge-1">
+      <div class="left">
+        <img class="left-img" src="./images/challenge-1.svg" alt="Lock" />
+      </div>
+      <div class="right">
+        <h2 class="challenge-title"><span>></span>Stage 1: Machines have their own language
+        </h2>
+        <p class="challenge-hint"><i>
+          [ Hint:Hacktoberfest started in 2014 and people were excited!
+          Today there are about 98,000 contributors but back in the day it wasn’t that big. Exactly how big was it though?
+          You’re looking for 10 digits. ]
+        </i></p>
+        <div class="input-container">
+          <input
+            type="text"
+            class="input challenge-1-input"
+            placeholder="Enter your Password here"
+          />
+          <button class="submit" onclick="submitAnswer1()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="challenge-box challenge-2">
+      <div class="left">
+        <img class="left-img" src="./images/challenge-1.svg" alt="Lock" />
+      </div>
+      <div class="right">
+        <h2 class="challenge-title"><span>></span>Stage 2: Hacktoberfest. It’s everywhere!          
+        </h2>
+        <p class="challenge-hint"><i>
+          [ Hint: The home page is decorated with its own name, but how much? You're looking for 6 digits. ]
+        </i></p>
+        <div class="input-container">
+          <input
+            type="text"
+            class="input challenge-2-input"
+            placeholder="Enter your Password here"
+          />
+          <button class="submit" onclick="submitAnswer2()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="challenge-box challenge-3">
+      <div class="left">
+        <img class="left-img" src="./images/challenge-1.svg" alt="Lock" />
+      </div>
+      <div class="right">
+        <h2 class="challenge-title"><span>></span>Stage 3: ASCII and time
+        </h2>
+        <p class="challenge-hint"><i>
+          [ Hint: F:00 forms a familiar shape that points you toward the next step. The full passcode contains 7 characters. ]
+        </i></p>
+        <div class="input-container">
+          <input
+            type="text"
+            class="input challenge-3-input"
+            placeholder="Enter your Password here"
+          />
+          <button class="submit" onclick="submitAnswer3()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+      <div class="challenge-box challenge-4">
+        <div class="left">
+          <img class="left-img" src="./images/challenge-1.svg" alt="Lock" />
+        </div>
+        <div class="right">
+          <h2 class="challenge-title"><span>></span>Stage 4: Evens Unlocked
+          </h2>
+          <p class="challenge-hint"><i>
+            [ How many even numbers are between 3 - 960 (inclusive). You can write a code to find the answer. ]
+          </i></p>
+          <div class="input-container">
+            <input
+              type="text"
+              class="input challenge-4-input"
+              placeholder="Enter your Password here"
+            />
+            <button class="submit" onclick="submitAnswer4()">Submit</button>
+          </div>
+        </div>
+      </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
